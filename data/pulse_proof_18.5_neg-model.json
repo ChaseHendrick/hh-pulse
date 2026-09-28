@@ -1,0 +1,20 @@
+{
+ "stage": "neg-model",
+ "T": 18.5,
+ "K": "[10.43835482913857076889312845037160196105110730 +/- 5.40e-45]",
+ "T_enter": 13.625,
+ "order": 40,
+ "prec": 256,
+ "verdict": "FAIL",
+ "fail": "escaped_below_-60",
+ "reason": "the whole set escaped (u < -60 mV) at t = [6.7251917 +/- 1.24e-8], before T_enter",
+ "provenance": {
+  "config_sha256": "cba928280c95d8f3360fb64c79fffa3148049529136aa7d854d115f968d8d8d1",
+  "block_sha256": "a2238370cfb7d9e85abb49a72784e4661bbeeb251ff0a05799fabd8e2f94f5de",
+  "code_sha256": "c179fc191094c44a1b1705c4bfe04e0800cbb3e50e8e806b69106db9549929e4",
+  "python_flint": "0.9.0",
+  "phi": "[3.8202161018185846361721608790412722748230108516452 +/- 1.49e-50]",
+  "E_l": "[10.598920969391678522198878529406579802775203122643 +/- 3.76e-49]"
+ },
+ "secs": 394
+}

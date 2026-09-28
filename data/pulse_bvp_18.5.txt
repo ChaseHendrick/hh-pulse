@@ -1,0 +1,6 @@
+T 18.5 status 0 The algorithm converged to the desired accuracy. K 10.438354829417266 shooting K 10.438354829135505 nodes 5645
+speed m/s 18.73216081463897
+peak u 90.585 mV at t = 0.160 ms; min u -9.672 mV at t = 1.510 ms
+scaled distance from rest last above 0.01 at t = 7.73 ms
+scaled distance from rest last above 0.001 at t = 11.55 ms
+scaled distance from rest last above 0.0001 at t = 16.74 ms

@@ -1,0 +1,5 @@
+independent re-check of the closing block at T = 6.3 C (mpmath.iv, 113 bits)
+rho = 0.6, r = 0.63, weights [10, 7, 1, 1, 40], K in [4.5106324382708510834032651457348157211, 4.5106324382708510834032651457348180323]
+(C) cone condition: True (1447 cells); (E) entrance condition: True (974 cells); 9 s
+negative control, radius x 1.5: rejected as expected
+ALL CHECKS PASSED

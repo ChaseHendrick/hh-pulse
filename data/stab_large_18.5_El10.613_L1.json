@@ -1,0 +1,24 @@
+{
+ "part": "L1",
+ "T": 18.5,
+ "s": [
+  "84.46898832",
+  "194.99204336",
+  "193.32096089"
+ ],
+ "Lambda": "14",
+ "ok": true,
+ "stats": {
+  "B": 1,
+  "record": 1287,
+  "B0": 4
+ },
+ "secs": 14,
+ "fails": "[]",
+ "negative_control": {
+  "Lambda": "12",
+  "rejected": true,
+  "fails": "[('record', (330, 0.9990234375, 1.0))]"
+ },
+ "verdict": "PASS"
+}

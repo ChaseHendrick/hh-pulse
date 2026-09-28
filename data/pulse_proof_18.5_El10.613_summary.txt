@@ -1,0 +1,11 @@
+phi        encloses 3^((18.5 - 6.3)/10): [3.8202161018185846361721608790412722748
+setup      as expected (passed)
+interval   as expected (passed)
+K1         as expected (passed)
+K2         as expected (passed)
+neg-shift  as expected (failed (outside_int_B0_at_T_enter), a negative control)
+neg-model  as expected (failed (escaped_below_-60), a negative control)
+certificates made from config 3d5cc4b78a27621a, closing block 5eebbc330178c5f3, programs c179fc191094c44a, python-flint 0.9.0 (sha256, first 16)
+K1 = 10.438051060101123692276486238318579121858669770478326236945 /ms, K2 = 10.438051060101123692276486238318579121858669773478326236945 /ms (K2 - K1 = [3.0000e-45 +/- 3e-54])
+speed theta in (18.73188824788048354046831343329624387695575077276, 18.73188824788048354046831343329624387695575077548) m/s for a = 238 um, R_2 = 35.4 ohm cm, C_M = 1 uF/cm^2
+ALL CHECKS PASSED

@@ -1,0 +1,4 @@
+# written by the programs while they run: logs, resumable states, checkpoints
+data/logs/
+data/ckpt/
+__pycache__/

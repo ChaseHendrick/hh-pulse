@@ -1,0 +1,4 @@
+T = 6.3 C; zeta = M (y - y*), weights [10, 7, 1, 1, 40], rho = 0.6, r = 0.63; K ball [4.5106324382708510834 +/- 3.27e-21]
+block B0: cone condition (C) CERTIFIED on 3590 cells (1 s); entrance condition (E) CERTIFIED on 1374 cells (1 s)
+negative control, radius x 1.5 (rho = 0.8999999999999999): rejected as expected
+ALL CHECKS PASSED

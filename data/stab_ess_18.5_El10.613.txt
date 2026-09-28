@@ -1,0 +1,14 @@
+T = 18.5 C, E_l tag 18.5_El10.613; space-clamped Jacobian at rest B:
+  [-0.6775212085 +/- 4.40e-12]  [69.19010900 +/- 3.75e-9]  [-55.44460112 +/- 3.53e-9]  [2.049219434 +/- 2.25e-10]
+  [0.1007217086 +/- 2.88e-11]  [-16.13206595 +/- 1.59e-10]  0  0
+  [0.01072573968 +/- 1.76e-12]  0  [-0.6998799312 +/- 1.69e-11]  0
+  [-0.01569019868 +/- 4.88e-12]  0  0  [-0.4486063022 +/- 6.56e-12]
+(E) delta = 0.448: every eigenvalue of B - s e1 e1^T has real part < -delta for every s >= 0: True
+    a3(s) > 0 on s >= 0 (in sigma = s/(1+s)): True, 1 pieces, smallest lower bound 1
+    a2(s) > 0 on s >= 0 (in sigma = s/(1+s)): True, 1 pieces, smallest lower bound 1.276
+    a1(s) > 0 on s >= 0 (in sigma = s/(1+s)): True, 1 pieces, smallest lower bound 3.96
+    a0(s) > 0 on s >= 0 (in sigma = s/(1+s)): True, 1 pieces, smallest lower bound 0.002395
+    D2(s) > 0 on s >= 0 (in sigma = s/(1+s)): True, 4 pieces, smallest lower bound 4.528
+    D3(s) > 0 on s >= 0 (in sigma = s/(1+s)): True, 8 pieces, smallest lower bound 4.933
+negative control delta = 0.449 rejected: True (fails: a0)
+ALL CHECKS PASSED

@@ -1,0 +1,12 @@
+1. jets
+  jet at u = 0.001: hhjet6 and hhjet overlap: True; d/dK vs central difference: max rel err 2.2e-45
+  jet at u =  24.9: hhjet6 and hhjet overlap: True; d/dK vs central difference: max rel err 1.7e-44
+  jet at u =  10.2: hhjet6 and hhjet overlap: True; d/dK vs central difference: max rel err 8.9e-46
+  jet at u =    60: hhjet6 and hhjet overlap: True; d/dK vs central difference: max rel err 1.6e-45
+  jet at u =    -8: hhjet6 and hhjet overlap: True; d/dK vs central difference: max rel err 6.1e-45
+2. enclosures through the upstroke contain an independent reference solution
+   order 30, tol 1e-40: 273 steps; u(1.5) in [38.815362945258393713 +/- 4.35e-19], reference [38.81536294525839371256528 +/- 2.69e-24]; contained: True
+   order 8, tol 1e-10: 200 steps; u(1.5) in [3.9e+1 +/- 0.306], reference [38.81536294525839371256528 +/- 2.69e-24]; contained: True
+3. negative control: order 8, tol 1e-10, Lagrange remainder dropped
+   197 steps; u(1.5) in [38.815363091704727286 +/- 3.92e-19], reference [38.81536294525839371256528 +/- 2.69e-24]; contained: False (must be False)
+ALL TESTS PASSED (167 s)
