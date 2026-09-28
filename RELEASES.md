@@ -3,6 +3,10 @@
 Each release of this repository is archived on Zenodo with its own DOI. The manuscript is a preprint and has not been
 peer reviewed.
 
+## 1.0.1 (2026-09-28)
+
+A checking release of the same preprint. The manuscript is unchanged. This archive adds the programs that read the printed numbers against the stored certificates: `code/check_abstract.py`, `code/check_speed.py`, `code/check_speed_decimal.py`, `code/check_fail.py` and `code/check_hypotheses.py`, and the exact-solution, Hopf, Nagumo and pendulum checks `code/suite_exact.py`, `code/suite_hopf.py`, `code/suite_nagumo.py` and `code/suite_pendulum.py`. `code/hypotheses.json` is the ledger those checks vouch for. The earlier-work sentence still says "within them". The suites are not part of the existence proof.
+
 ## 1.0.0 (2026-09-28)
 
 The first public release of the preprint *The propagated action potential of Hodgkin and Huxley at their 1952
