@@ -1,0 +1,41 @@
+[
+  {
+    "id": "theorem-1",
+    "statement": "For some K* in (K1, K2), with K1 and K2 the exact binary fractions of `data/pulse_proof_18.5_El10.613_config.json`, K1 = 10.4380510601011236922764862383185791218586697704783..., K2 - K1 = 3.000e-45 (to 4 digits), the system of Section 2 has a pulse, and max u > 90.57 mV along it.",
+    "status": "boxed",
+    "certificate": "data/pulse_proof_18.5_El10.613_summary.txt"
+  },
+  {
+    "id": "theorem-2",
+    "statement": "For some K* in (K1, K2), with K1 and K2 the exact binary fractions of `data/pulse_proof_6.3_El10.613_config.json`, K1 = 4.51063243827085108340326514573481715152474867970496..., K2 - K1 = 2.800e-61 (to 4 digits), the system of Section 2 has a pulse, and max u > 102.98 mV along it.",
+    "status": "boxed",
+    "certificate": "data/pulse_proof_6.3_El10.613_summary.txt"
+  },
+  {
+    "id": "remark-1",
+    "statement": "With E_l = 10.5989209693916785... (the value that makes the resting current zero at u = 0, so that u* = 0) Theorem 1 holds with K2 - K1 = 3.000e-45 (to 4 digits) and the speed in (18.73216081438890211377538515402816936801773373586, 18.73216081438890211377538515402816936801773373858) m/s.",
+    "status": "boxed",
+    "certificate": "data/pulse_proof_18.5_summary.txt"
+  },
+  {
+    "id": "remark-2",
+    "statement": "High-precision multiple shooting gives K* = 10.43805106010112369227648623831857912185866977197832623... at 18.5 C and K* = 4.51063243827085108340326514573481715152474867970496453492032531095926... at 6.3 C (printed E_l), each inside the interval [K1, K2] of its theorem.",
+    "status": "numerical",
+    "note": "Not a hypothesis of the existence proof. The paper presents these centres as a numerical check."
+  },
+  {
+    "id": "hastings-1976-rest",
+    "statement": "Hastings (1976) beyond pp. 229-230 was not obtained.",
+    "status": "unread"
+  },
+  {
+    "id": "foote-chen-1981",
+    "statement": "Foote and Chen (1981) was not obtained.",
+    "status": "unread"
+  },
+  {
+    "id": "huxley-1959",
+    "statement": "Huxley (1959) was not read.",
+    "status": "unread"
+  }
+]
