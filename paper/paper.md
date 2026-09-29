@@ -133,9 +133,13 @@ that makes the resting current zero at u = 0, so that u* = 0) Theorem 1 holds wi
 (18.73216081438890211377538515402816936801773373586, 18.73216081438890211377538515402816936801773373858) m/s.
 The printed E_l moves the speed by 2.7e-4 m/s (to 2 digits).
 
-**Remark 2 (numerical, not proved).** High-precision multiple shooting gives K* = 10.43805106010112369227648623831857
-912185866977197832623... at 18.5 C and K* = 4.51063243827085108340326514573481715152474867970496453492032531095926... at
-6.3 C (printed E_l), each inside the interval [K1, K2] of its theorem. Hodgkin and Huxley's K = 10.47 /ms is 0.3 per
+**Remark 2 (numerical, not proved).** High-precision multiple shooting, at the printed leak potential, gives
+
+    K*(18.5 C) = 10.43805106010112369227648623831857912185866977197832623694577177829239
+
+    K*(6.3 C) = 4.510632438270851083403265145734817151524748679704964534920325310959260
+
+each inside the interval [K1, K2] of its theorem. Hodgkin and Huxley's K = 10.47 /ms is 0.3 per
 cent higher; with the same fibre constants it gives 18.76 m/s, which they report as 18.8 m/s. The measured speed in
 that fibre was 21.2 m/s. As rounding intervals of those printed values, [10.465, 10.475] /ms, [18.75, 18.85] m/s and
 [21.15, 21.25] m/s are each disjoint from the interval of Theorem 1.
@@ -284,10 +288,10 @@ lengths; every enclosure is checked); the characteristic-polynomial check of (H1
 
 ## 5. Computations, controls and checks
 
-Table: stages at 18.5 C (printed E_l), one process at a time, 256 bits, order 40; the times are those the
-certificates record.
+Table: stages at 18.5 C (printed E_l), one process at a time, 256 bits, order 40. The times are the wall-clock seconds
+the certificates record (`secs`), not processor time.
 
-| stage | result | CPU time |
+| stage | result | wall time |
 |---|---|---|
 | setup (H2, H3, the check of H1) | lambda_u = 10.89208...; Lemma B at r_B = 1e-25; z1' > 0 and u > u* on the exit set; B0 certified on 1232 + 5916 cells | seconds |
 | interval (H4) | at T_enter = 13.625 ms: zeta_1 in [-0.341, 0.341], abs(zeta_s) <= 0.63603 < 0.8 | 376 s |
@@ -299,7 +303,7 @@ certificates record.
 
 Table: the same at 6.3 C (printed E_l).
 
-| stage | result | CPU time |
+| stage | result | wall time |
 |---|---|---|
 | setup (H2, H3, the check of H1) | lambda_u = 4.974030...; Lemma B at r_B = 1e-32; z1' > 0 and u > u* on the exit set; B0 certified on 3590 + 1374 cells | seconds |
 | interval (H4) | at T_enter = 36.125 ms: zeta_1 in [-0.273, 0.273], abs(zeta_s) <= 0.45631 < 0.6 | 852 s |
@@ -337,7 +341,7 @@ configuration's, or whose negative control failed for a reason other than its st
 thirteen kinds of stale, foreign or self-contradictory certificate in a copy of the data and requires the summary to
 refuse each, and to accept the unaltered copy.
 
-**Consistency.** At T_enter = 13.625 ms (18.5 C, zero-current E_l) the certificates enclose zeta_1(K1) in [-0.30474 +/- 8.59e-6] and zeta_1(K2) in [0.34075 +/- 8.50e-6].
+**Consistency.** At T_enter = 13.625 ms (18.5 C, printed E_l) the certificates enclose zeta_1(K1) in [-0.3032 +/- 1.03e-5] and zeta_1(K2) in [0.33917 +/- 8.72e-6].
 
 ## 6. Comparison with Carpenter (1977) and Hastings (1976)
 

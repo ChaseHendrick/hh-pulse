@@ -1,0 +1,8 @@
+vector field of the programs (hhjet6.vfield, u = -V) against an independent transcription of the 1952
+equations in their convention (mpmath, 60 digits): 64 states at 18.5 and 6.3 C,
+E_l = 10.613 and the zero-current value, including u = 10 and u = 25 and states next to them
+largest relative difference 5.22e-60 (needs < 1e-40): True
+negative control (V_K = -12 in the transcription): largest relative difference 1.54, caught: True
+handwritten float Jacobian in stab_num.Model.Df against hhjet6.jacobian: largest absolute
+difference 7.276e-12 (needs < 1e-8): True
+ALL TESTS PASSED
