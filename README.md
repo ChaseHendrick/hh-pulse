@@ -2,7 +2,7 @@
 
 **Chase Hendrick**, Independent Researcher · [ORCID 0009-0002-9754-6087](https://orcid.org/0009-0002-9754-6087)
 
-**Preprint**, release 1.0.2 (2026-09-29), [doi:10.5281/zenodo.23047089](https://doi.org/10.5281/zenodo.23047089). Release 1.0.0 remains at [doi:10.5281/zenodo.23013935](https://doi.org/10.5281/zenodo.23013935). Not peer reviewed. The GitHub release is [1.0.2](https://github.com/ChaseHendrick/hh-pulse/releases/tag/1.0.2).
+**Preprint**, release 1.0.3 (2026-09-29), [doi:10.5281/zenodo.23048254](https://doi.org/10.5281/zenodo.23048254). Release 1.0.0 remains at [doi:10.5281/zenodo.23013935](https://doi.org/10.5281/zenodo.23013935). Not peer reviewed. The GitHub release is [1.0.3](https://github.com/ChaseHendrick/hh-pulse/releases/tag/1.0.3).
 
 **[Read the manuscript (PDF)](paper/hh-pulse.pdf)** · [Markdown source](paper/paper.md)
 
