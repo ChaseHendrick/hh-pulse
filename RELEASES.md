@@ -3,7 +3,13 @@
 Each release of this repository is archived on Zenodo with its own DOI. The manuscript is a preprint and has not been
 peer reviewed.
 
+## 1.0.3 (2026-09-29)
+
+Publication figures, contact and rights update. Adds a vector voltage/gating figure reconstructed from the stored printed-leak shooting nodes, with segment and refinement diagnostics. The manuscript uses the updated public research contact. Manuscript rights are stated outside the scientific abstract, preserving the existing policy and earlier license grants. Archive metadata identifies mixed component rights rather than applying the code license to the whole preprint ZIP. Reference-list reading-status annotations have been removed where present. No theorem, proof program or certificate changes. The release includes its rebuilt manuscript PDF; previous archives remain unchanged.
+
 ## 1.0.2 (2026-09-29)
+
+**DOI:** [10.5281/zenodo.23047089](https://doi.org/10.5281/zenodo.23047089). Publication / Preprint; the downloaded archive ZIP contains the registered manuscript PDF.
 
 Publication metadata and packaging update. The manuscript now identifies the public companion and its immutable checking-release archive. The source ZIP includes the rebuilt manuscript PDF. Citation metadata includes a usable publication locator and explains the component license terms. No theorem, proof program, certificate or scientific claim changes. Earlier archives remain available unchanged.
 

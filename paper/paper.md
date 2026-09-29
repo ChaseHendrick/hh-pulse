@@ -1,6 +1,9 @@
 ---
 title: "The Propagated Action Potential of Hodgkin and Huxley at Their 1952 Constants: A Computer-Assisted Existence Proof"
-author: "Chase Hendrick, Independent Researcher (ORCID 0009-0002-9754-6087)"
+author: |
+  Chase Hendrick, Independent Researcher\
+  ORCID [0009-0002-9754-6087](https://orcid.org/0009-0002-9754-6087)\
+  [chase@hendrickresearch.com](mailto:chase@hendrickresearch.com)
 status: "Release 1.0.0, 2026-09-28."
 ---
 
@@ -143,6 +146,8 @@ each inside the interval [K1, K2] of its theorem. Hodgkin and Huxley's K = 10.47
 cent higher; with the same fibre constants it gives 18.76 m/s, which they report as 18.8 m/s. The measured speed in
 that fibre was 21.2 m/s. As rounding intervals of those printed values, [10.465, 10.475] /ms, [18.75, 18.85] m/s and
 [21.15, 21.25] m/s are each disjoint from the interval of Theorem 1.
+
+![Numerical illustrations of the pulses at the printed leak potential $E_l = 10.613$ mV. Left: depolarization $u$; the dotted line is the resting value. Right: the dimensionless gate fractions $m$, $n$ and $h$, distinguished by line style as well as color. Each row uses its own time scale, with the voltage maximum shifted to zero. The curves reconstruct the committed high-precision multiple-shooting nodes of Remark 2 using short floating-point DOP853 segments (`code/make_figure.py`); they are not interval enclosures or additional proof evidence. Only the stored finite coordinate range is shown, without extrapolating either asymptotic tail.](figures/pulse-profiles.pdf){width=100%}
 
 **Not claimed.** Uniqueness of the pulse or of K*; stability; other temperatures; the slow pulse that Huxley (1959)
 and later authors found numerically.
@@ -358,8 +363,8 @@ did not verify for the 1952 functions.
 ## 7. Reproducibility
 
 The companion repository is [ChaseHendrick/hh-pulse](https://github.com/ChaseHendrick/hh-pulse).
-Checking release 1.0.1 archives the exact existence-proof programs, certificates and supplementary checking
-scripts at [doi:10.5281/zenodo.23028512](https://doi.org/10.5281/zenodo.23028512).
+Release 1.0.2 archives the exact existence-proof programs, certificates and supplementary checking
+scripts at [doi:10.5281/zenodo.23047089](https://doi.org/10.5281/zenodo.23047089).
 
 The programs are in `code/` (Apache-2.0) and need python-flint 0.9.0, mpmath, numpy and scipy
 (`code/requirements.txt`). From the folder of this paper:
@@ -374,6 +379,8 @@ and the two negative controls), the independent block check (`hh_block_check_iv.
 `data/pulse_proof_<T>_El10.613_*.json` (printed E_l) and `data/pulse_proof_18.5_*.json` (zero-current E_l), with the
 summaries `*_summary.txt`. The starting profiles `data/pulse_<T>.npz` are numerical initial guesses made by
 `pulse_bvp.py`.
+
+The vector profile figure is rebuilt with `python3 code/make_figure.py` (matplotlib is needed only for this illustration). It uses the printed-leak `hp_pulse_<T>_El10.613.json` records, explicitly sets E_l = 10.613, and records source hashes, segment endpoint disagreement and a tighter-tolerance comparison and rejection of a deliberately wrong leak potential in `data/figure-profile-checks.json`. These are display-quality numerical checks, not proof steps.
 
 ## Appendix A. Validated integration
 
@@ -508,50 +515,45 @@ MathSciNet reviews (not reachable); Google Scholar was not reachable. Hastings (
 Chen (1981) could not be obtained. These are the limits of the statement on earlier work in Section 1: we found no
 earlier proof, within them.
 
+**Rights.** Copyright (c) 2026 Chase Hendrick. The manuscript and figures are all rights reserved. Code and data are licensed under Apache-2.0, subject to component notices. These notices do not revoke licenses previously granted for earlier material.
+
 ## References
 
 - Arioli, G., Koch, H. Existence and stability of traveling pulse solutions of the FitzHugh-Nagumo equation. Nonlinear
-  Anal. 113 (2015) 51-70. doi:10.1016/j.na.2014.09.023. (Read in the parts cited; not used by the proof.)
+  Anal. 113 (2015) 51-70. doi:10.1016/j.na.2014.09.023.
 - Carpenter, G. A. Nerve impulse equations. In: Structural Stability, the Theory of Catastrophes, and Applications in
-  the Sciences, Lecture Notes in Math. 525, Springer, 1976, 58-76. doi:10.1007/BFb0077843. Zbl 0364.92015. (Listed by
-  zbMATH next to the 1977 paper; not read; not used by the proof.)
+  the Sciences, Lecture Notes in Math. 525, Springer, 1976, 58-76. doi:10.1007/BFb0077843. Zbl 0364.92015.
 - Carpenter, G. A. A geometric approach to singular perturbation problems with applications to nerve impulse
-  equations. J. Differential Equations 23 (1977) 335-367. doi:10.1016/0022-0396(77)90116-4. (Read in full; not used
-  by the proof.)
+  equations. J. Differential Equations 23 (1977) 335-367. doi:10.1016/0022-0396(77)90116-4.
 - Conley, C. On traveling wave solutions of nonlinear diffusion equations. In: Dynamical Systems, Theory and
   Applications (J. Moser, ed.), Lecture Notes in Physics 38, Springer, 1975, 498-510. doi:10.1007/3-540-07171-7_13.
-  (Credited for the method; not read; not used by the proof.)
 - Conley, C. Isolated Invariant Sets and the Morse Index. CBMS Regional Conference Series in Mathematics 38, American
-  Mathematical Society, 1978. Zbl 0397.34056. (Credited for the method; not read; not used by the proof.)
+  Mathematical Society, 1978. Zbl 0397.34056.
 - Czechowski, A., Zgliczynski, P. Existence of periodic solutions of the FitzHugh-Nagumo equations for an explicit
   range of the small parameter. SIAM J. Appl. Dyn. Syst. 15 (2016) 1615-1655. doi:10.1137/15M1007707;
-  arXiv:1502.02451. (Found in the search; not read.)
+  arXiv:1502.02451.
 - FLINT team. FLINT: Fast Library for Number Theory, version 3.6.0 (which contains Arb), https://flintlib.org; used
-  through python-flint 0.9.0, https://github.com/flintlib/python-flint. (The software of the computations.)
+  through python-flint 0.9.0, https://github.com/flintlib/python-flint.
 - Foote, J. R., Chen, K.-H. Traveling wave properties of the Hodgkin-Huxley equations. Chinese J. Math. 9 (1981)
-  1-23. Zbl 0472.35048. (Could not be obtained; bears only on the paragraph on earlier work.)
+  1-23. Zbl 0472.35048.
 - Hastings, S. P. On travelling wave solutions of the Hodgkin-Huxley equations. Arch. Rational Mech. Anal. 60 (1976)
-  229-257. doi:10.1007/BF01789258. (Read: pp. 229-230; the rest could not be obtained; bears only on the paragraph on
-  earlier work.)
+  229-257. doi:10.1007/BF01789258.
 - Hodgkin, A. L., Huxley, A. F. A quantitative description of membrane current and its application to conduction and
-  excitation in nerve. J. Physiol. 117 (1952) 500-544. (Read: pp. 519-528 and Table 3.)
+  excitation in nerve. J. Physiol. 117 (1952) 500-544.
 - Huxley, A. F. Ion movements during nerve activity. Ann. N.Y. Acad. Sci. 81 (1959) 221-246.
-  doi:10.1111/j.1749-6632.1959.tb49311.x. (Not read; cited for the slow pulse, which is not claimed.)
+  doi:10.1111/j.1749-6632.1959.tb49311.x.
 - Ikeda, H., Mimura, M., Tsujikawa, T. Slow traveling wave solutions to the Hodgkin-Huxley equations. In: Recent
   Topics in Nonlinear PDE III, Lecture Notes Numer. Appl. Anal. 9 (1987) 1-73; and Japan J. Appl. Math. 6 (1989)
-  1-66, doi:10.1007/BF03167914. (Abstracts read; not used by the proof.)
+  1-66, doi:10.1007/BF03167914.
 - Johansson, F. Arb: efficient arbitrary-precision midpoint-radius interval arithmetic. IEEE Trans. Comput. 66 (2017)
-  1281-1292. doi:10.1109/TC.2017.2690633. (The ball arithmetic the computations use.)
+  1281-1292. doi:10.1109/TC.2017.2690633.
 - Lohner, R. J. Einschliessung der Loesung gewoehnlicher Anfangs- und Randwertaufgaben und Anwendungen. Dissertation,
-  Universitaet Karlsruhe, 1988. Zbl 0663.65074. (Credited for the method; not read; not used by the proof.)
+  Universitaet Karlsruhe, 1988. Zbl 0663.65074.
 - mpmath development team. mpmath: a Python library for arbitrary-precision floating-point arithmetic, version 1.3.0,
   https://mpmath.org. (The interval arithmetic of the independent block check.)
 - Teschl, G. Ordinary Differential Equations and Dynamical Systems. Graduate Studies in Mathematics 140, American
-  Mathematical Society, 2012. (Read in the author's freely available preliminary version, whose page numbers are
-  given: Corollary 2.15, p. 52; the Routh-Hurwitz criterion, p. 72; Theorem 6.1, p. 189; Lemmas 6.3 and 6.5, p. 193;
-  Lemma 6.6, p. 194; Theorems 9.4 and 9.5, p. 259.)
+  Mathematical Society, 2012.
 - Wazewski, T. Sur un principe topologique de l'examen de l'allure asymptotique des integrales des equations
-  differentielles ordinaires. Ann. Soc. Polon. Math. 20 (1947) 279-313 (zbMATH gives 1948: Zbl 0032.35001). (Credited
-  for the method; not read; not used by the proof.)
+  differentielles ordinaires. Ann. Soc. Polon. Math. 20 (1947) 279-313 (zbMATH gives 1948: Zbl 0032.35001).
 - Zgliczynski, P. Covering relations, cone conditions and the stable manifold theorem. J. Differential Equations 246
-  (2009) 1774-1819. doi:10.1016/j.jde.2008.12.019. (Credited for the method; not read; not used by the proof.)
+  (2009) 1774-1819. doi:10.1016/j.jde.2008.12.019.
