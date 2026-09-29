@@ -9,7 +9,7 @@ authors:
     orcid: "https://orcid.org/0009-0002-9754-6087"
 license: Apache-2.0
 repository-code: "https://github.com/ChaseHendrick/hh-pulse"
-doi: "10.5281/zenodo.23013935"
+doi: "10.5281/zenodo.23028512"
 preferred-citation:
   type: article
   title: "The propagated action potential of Hodgkin and Huxley at their 1952 constants: a computer-assisted existence proof"
