@@ -1,0 +1,114 @@
+{
+  "scope": "Numerical illustration only, not proof evidence or a global error enclosure.",
+  "method": "DOP853 short segments restarted at committed high-precision shooting nodes; no extrapolated tails.",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.2"
+  },
+  "checks": [
+    {
+      "temperatureC": 18.5,
+      "source": "data/hp_pulse_18.5_El10.613.json",
+      "sourceSha256": "3147bf1b390bd4bc1c0be647dceef416815a8128acd4f3f56b981c6e530b050a",
+      "leakPotentialMv": 10.613,
+      "KPerMs": "10.43805106010112369227648623831857912185866977197832623694577177829239",
+      "segments": 49,
+      "samples": 19601,
+      "stateOrder": [
+        "u",
+        "du/dxi",
+        "m",
+        "n",
+        "h"
+      ],
+      "maximumSegmentEndpointDisagreement": [
+        3.3919889119715663e-10,
+        7.745626362520852e-09,
+        8.43543984663242e-13,
+        1.6286971771251046e-13,
+        1.5307199952019346e-14
+      ],
+      "maximumToleranceRefinementDifference": [
+        2.8185667133584502e-09,
+        1.4421908645090298e-07,
+        9.986655946647716e-11,
+        8.61688498332569e-12,
+        6.226019699795415e-12
+      ],
+      "displayCheckLimits": [
+        1e-06,
+        1e-05,
+        1e-08,
+        1e-08,
+        1e-08
+      ],
+      "wrongLeakControlEndpointDisagreement": [
+        0.01857351381256933,
+        0.4265021375003073,
+        6.571080211281721e-05,
+        8.687162613041366e-06,
+        6.039493931964124e-06
+      ],
+      "wrongLeakControlRejected": true,
+      "sampledMaximumMvNumerical": 90.57833598902465,
+      "minimumMvNumerical": -9.670755326584777,
+      "recordedCoordinateExtentMs": [
+        -1.638947988807158,
+        10.5
+      ]
+    },
+    {
+      "temperatureC": 6.3,
+      "source": "data/hp_pulse_6.3_El10.613.json",
+      "sourceSha256": "1323f1eb74dcce5057ef2b1c64ef1f90ed3183952ac9965bfc8e43ab07c76d1d",
+      "leakPotentialMv": 10.613,
+      "KPerMs": "4.510632438270851083403265145734817151524748679704964534920325310959260",
+      "segments": 49,
+      "samples": 19601,
+      "stateOrder": [
+        "u",
+        "du/dxi",
+        "m",
+        "n",
+        "h"
+      ],
+      "maximumSegmentEndpointDisagreement": [
+        4.69796646029863e-09,
+        7.130401513677498e-08,
+        4.211075932403219e-13,
+        1.141531313919586e-12,
+        2.974009927214638e-14
+      ],
+      "maximumToleranceRefinementDifference": [
+        2.499906770481175e-08,
+        3.7952118248085753e-07,
+        3.297273565294745e-11,
+        6.07880412673012e-12,
+        3.5235148132528593e-12
+      ],
+      "displayCheckLimits": [
+        1e-06,
+        1e-05,
+        1e-08,
+        1e-08,
+        1e-08
+      ],
+      "wrongLeakControlEndpointDisagreement": [
+        0.21885357093381685,
+        3.3233143590736276,
+        0.00020368908101109362,
+        5.299261678337608e-05,
+        1.1693824061673186e-05
+      ],
+      "wrongLeakControlRejected": true,
+      "sampledMaximumMvNumerical": 102.98080140664186,
+      "minimumMvNumerical": -10.940675784385562,
+      "recordedCoordinateExtentMs": [
+        -3.584765394973228,
+        23.0
+      ]
+    }
+  ]
+}
