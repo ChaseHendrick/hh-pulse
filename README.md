@@ -1,10 +1,10 @@
-# The propagated action potential of Hodgkin and Huxley at their 1952 constants: a computer-assisted existence proof
+# The Propagated Action Potential of Hodgkin and Huxley at Their 1952 Constants: A Computer-Assisted Existence Proof
 
 **Chase Hendrick**, Independent Researcher · [ORCID 0009-0002-9754-6087](https://orcid.org/0009-0002-9754-6087)
 
 **Preprint**, release 1.0.1 (2026-09-29), [doi:10.5281/zenodo.23028512](https://doi.org/10.5281/zenodo.23028512). Release 1.0.0 remains at [doi:10.5281/zenodo.23013935](https://doi.org/10.5281/zenodo.23013935). Not peer reviewed. The GitHub release is [1.0.1](https://github.com/ChaseHendrick/hh-pulse/releases/tag/1.0.1).
 
-**[Read the manuscript](paper/paper.md)**
+**[Read the manuscript (PDF)](paper/hh-pulse.pdf)** · [Markdown source](paper/paper.md)
 
 ## Abstract
 
@@ -53,7 +53,7 @@ The orbit leaves rest along its one-dimensional unstable manifold. A validated T
 
 | Folder | What is in it |
 |---|---|
-| [`paper/`](paper/) | The manuscript, [`paper.md`](paper/paper.md) |
+| [`paper/`](paper/) | The manuscript, [`hh-pulse.pdf`](paper/hh-pulse.pdf), and its source, [`paper.md`](paper/paper.md) |
 | [`code/`](code/) | The programs, [`run.sh`](code/run.sh) to rerun everything, and [`requirements.txt`](code/requirements.txt) |
 | [`data/`](data/) | The certificates of the three proofs (`pulse_proof_*.json`) and their summaries, the numerical centres (`hp_pulse_*.json`), the closing blocks, the reports of the independent block check and of the tests, and the starting profiles |
 
@@ -69,6 +69,13 @@ The orbit leaves rest along its one-dimensional unstable manifold. A validated T
 | [`tables.py`](code/tables.py) | Not part of the proof: prints the values the manuscript quotes from the certificates, and with `--check` requires each in the manuscript | seconds |
 | [`certify_rest_wave.py`](code/certify_rest_wave.py), [`lohner6.py`](code/lohner6.py), [`hhjet6.py`](code/hhjet6.py), [`hhseries.py`](code/hhseries.py), [`hhjet.py`](code/hhjet.py) | The rest state and Lemmas A and B; the integrator; the Taylor jets of the field | |
 | [`hhwave.py`](code/hhwave.py), [`pulse_bvp.py`](code/pulse_bvp.py) | Double-precision model and the boundary-value solver that made the starting profiles | |
+
+## Exploratory work outside this release
+
+Stability and a temperature strip are not claims of this manuscript. The unfinished stability scripts (except `stab_num.py`),
+`tstrip.py` and `test_tstrip.sh` explorations that were accidentally included in earlier source archives
+are excluded from release 1.0.2 onward. They remain in the development repository. `stab_num.py` is retained because the published `test_field.py` imports its independent Jacobian. The published
+existence-proof programs, certificates and checks are unchanged; earlier archives are retained.
 
 ## Reproduce
 
@@ -90,7 +97,7 @@ summary, which checks the hashes of every certificate, accepted them all.
 ```bibtex
 @misc{hendrick2026hhpulse,
   author = {Hendrick, Chase},
-  title  = {The propagated action potential of {Hodgkin} and {Huxley} at their 1952 constants: a computer-assisted existence proof},
+  title  = {The Propagated Action Potential of {Hodgkin} and {Huxley} at Their 1952 Constants: A Computer-Assisted Existence Proof},
   year   = {2026},
   doi    = {10.5281/zenodo.23028512},
   url    = {https://doi.org/10.5281/zenodo.23028512}

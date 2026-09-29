@@ -1,5 +1,5 @@
 ---
-title: "The propagated action potential of Hodgkin and Huxley at their 1952 constants: a computer-assisted existence proof"
+title: "The Propagated Action Potential of Hodgkin and Huxley at Their 1952 Constants: A Computer-Assisted Existence Proof"
 author: "Chase Hendrick, Independent Researcher (ORCID 0009-0002-9754-6087)"
 status: "Release 1.0.0, 2026-09-28."
 ---
@@ -356,6 +356,10 @@ we have not read them. Hastings's theorem (pp. 229-230, read) needs n and h slow
 did not verify for the 1952 functions.
 
 ## 7. Reproducibility
+
+The companion repository is [ChaseHendrick/hh-pulse](https://github.com/ChaseHendrick/hh-pulse).
+Checking release 1.0.1 archives the exact existence-proof programs, certificates and supplementary checking
+scripts at [doi:10.5281/zenodo.23028512](https://doi.org/10.5281/zenodo.23028512).
 
 The programs are in `code/` (Apache-2.0) and need python-flint 0.9.0, mpmath, numpy and scipy
 (`code/requirements.txt`). From the folder of this paper:
