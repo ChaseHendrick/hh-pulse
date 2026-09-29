@@ -1,0 +1,8 @@
+1. temperature('6.3') == '6.3'; phi_of('6.3') - 1 = [+/- 6.10e-78] contains 0  ok
+2. phi_of(6.3) (a float) contains 1                                            ok
+3. phi_of('18.5') equals the old ball [3.82021610182 +/- 1.42e-12]             ok
+4. hh_block_check_iv.phi_iv('6.3') contains 1                                  ok
+5. no program parses the temperature with float()                              ok
+6. temperature() refuses a float and non-decimal strings (5 of 5)              ok
+negative control: the old float path gives phi - 1 = [-1.9515e-17 +/- 2.75e-22], which excludes 0: True
+ALL TESTS PASSED

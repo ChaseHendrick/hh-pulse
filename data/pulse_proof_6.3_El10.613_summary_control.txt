@@ -1,0 +1,16 @@
+summary control at T = 6.3 C (6.3_El10.613): each planted defect must make the summary fail
+unaltered copy                                          summary passes: as expected
+K1 certificate missing (the stage crashed)              summary fails: as expected (K1         MISSING)
+K2 certificate made by other programs                   summary fails: as expected (K2         NOT AS EXPECTED (passed); STALE, FOREIGN OR INCONSISTENT: made from another cod)
+interval certificate made from another configuration    summary fails: as expected (interval   NOT AS EXPECTED (passed); STALE, FOREIGN OR INCONSISTENT: made from another con)
+K1 certificate made with another closing block          summary fails: as expected (K1         NOT AS EXPECTED (passed); STALE, FOREIGN OR INCONSISTENT: made from another blo)
+setup certificate with the phi of the binary number 6.3 summary fails: as expected (setup      NOT AS EXPECTED (passed); STALE, FOREIGN OR INCONSISTENT: made from another phi)
+K2 certificate for another K                            summary fails: as expected (K2         NOT AS EXPECTED (passed); STALE, FOREIGN OR INCONSISTENT: K or order differ fro)
+configuration changed after the stages ran              summary fails: as expected (setup      NOT AS EXPECTED (passed); STALE, FOREIGN OR INCONSISTENT: made from another con)
+closing block changed after the stages ran              summary fails: as expected (setup      NOT AS EXPECTED (passed); STALE, FOREIGN OR INCONSISTENT: made from another blo)
+neg-model failed for another reason (the set blew up)   summary fails: as expected (neg-model  NOT AS EXPECTED (failed (blew_up), a negative control))
+setup certificate with "C": false and "ok": true        summary fails: as expected (setup      NOT AS EXPECTED (passed); STALE, FOREIGN OR INCONSISTENT: ok is not the conjunc)
+interval PASS with in_int_B0_at_T_enter false           summary fails: as expected (interval   NOT AS EXPECTED (passed); STALE, FOREIGN OR INCONSISTENT: the verdict disagrees)
+K1 PASS without reaching the cone                       summary fails: as expected (K1         NOT AS EXPECTED (passed); STALE, FOREIGN OR INCONSISTENT: PASS without reaching)
+neg-shift passed                                        summary fails: as expected (neg-shift  NOT AS EXPECTED (passed, a negative control))
+ALL CHECKS PASSED
