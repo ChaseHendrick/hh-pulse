@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use these programs or data, please cite the paper."
-title: "The propagated action potential of Hodgkin and Huxley at their 1952 constants: a computer-assisted existence proof"
+title: "The Propagated Action Potential of Hodgkin and Huxley at Their 1952 Constants: A Computer-Assisted Existence Proof"
 type: software
 authors:
   - given-names: "Chase"
@@ -12,10 +12,12 @@ repository-code: "https://github.com/ChaseHendrick/hh-pulse"
 doi: "10.5281/zenodo.23028512"
 preferred-citation:
   type: article
-  title: "The propagated action potential of Hodgkin and Huxley at their 1952 constants: a computer-assisted existence proof"
+  title: "The Propagated Action Potential of Hodgkin and Huxley at Their 1952 Constants: A Computer-Assisted Existence Proof"
   authors:
     - given-names: "Chase"
       family-names: "Hendrick"
       affiliation: "Independent Researcher"
       orcid: "https://orcid.org/0009-0002-9754-6087"
   year: 2026
+  url: "https://github.com/ChaseHendrick/hh-pulse"
+  doi: "10.5281/zenodo.23028512"
