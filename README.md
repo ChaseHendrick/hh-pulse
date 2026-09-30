@@ -2,7 +2,7 @@
 
 **Chase Hendrick**, Independent Researcher · [ORCID 0009-0002-9754-6087](https://orcid.org/0009-0002-9754-6087)
 
-**Preprint**, release 1.0.3 (2026-09-29), [doi:10.5281/zenodo.23048254](https://doi.org/10.5281/zenodo.23048254). Release 1.0.0 remains at [doi:10.5281/zenodo.23013935](https://doi.org/10.5281/zenodo.23013935). Not peer reviewed. The GitHub release is [1.0.3](https://github.com/ChaseHendrick/hh-pulse/releases/tag/1.0.3).
+**Preprint**, release 1.0.4 (2026-09-29), [doi:10.5281/zenodo.23050604](https://doi.org/10.5281/zenodo.23050604). Release 1.0.0 remains at [doi:10.5281/zenodo.23013935](https://doi.org/10.5281/zenodo.23013935). Not peer reviewed. The GitHub release is [1.0.4](https://github.com/ChaseHendrick/hh-pulse/releases/tag/1.0.4).
 
 **[Read the manuscript (PDF)](paper/hh-pulse.pdf)** · [Markdown source](paper/paper.md)
 
@@ -99,8 +99,8 @@ summary, which checks the hashes of every certificate, accepted them all.
   author = {Hendrick, Chase},
   title  = {The Propagated Action Potential of {Hodgkin} and {Huxley} at Their 1952 Constants: A Computer-Assisted Existence Proof},
   year   = {2026},
-  doi    = {10.5281/zenodo.23047089},
-  url    = {https://doi.org/10.5281/zenodo.23047089}
+  doi    = {10.5281/zenodo.23050604},
+  url    = {https://doi.org/10.5281/zenodo.23050604}
 }
 ```
 
