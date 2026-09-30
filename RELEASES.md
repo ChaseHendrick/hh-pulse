@@ -3,6 +3,10 @@
 Each release of this repository is archived on Zenodo with its own DOI. The manuscript is a preprint and has not been
 peer reviewed.
 
+## 1.0.4 (2026-09-29)
+
+Figure layout update. Replaces the gating-variable keys inside the right-hand pulse panels with one shared key above all four panels, with reserved figure margins. The m, n and h styles, temperature labels, independent coordinate scales and resting-voltage guide are preserved. The vector figure and manuscript PDF were rebuilt and inspected at manuscript scale. Shooting-node input hashes and the display-check results are unchanged. Scientific captions, numerical results, proof programs and certificates are unchanged. No new proof or scientific validation is claimed; previous archives remain unchanged.
+
 ## 1.0.3 (2026-09-29)
 
 **DOI:** [10.5281/zenodo.23048254](https://doi.org/10.5281/zenodo.23048254). Publication / Preprint; both the actual GitHub source ZIP and the downloaded Zenodo ZIP contain the reviewed manuscript PDF byte for byte.
