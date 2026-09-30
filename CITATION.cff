@@ -9,6 +9,7 @@ authors:
     orcid: "https://orcid.org/0009-0002-9754-6087"
 license: Apache-2.0
 repository-code: "https://github.com/ChaseHendrick/hh-pulse"
+version: "1.0.4"
 doi: "10.5281/zenodo.23050604"
 preferred-citation:
   type: article
