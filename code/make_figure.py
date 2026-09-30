@@ -47,7 +47,7 @@ def reconstruct(d, tolerance, leak_potential=10.613):
     return np.asarray(times), np.asarray(curves), np.max(joins, axis=0), model
 
 
-fig, axes = plt.subplots(2, 2, figsize=(6.3, 4.5), constrained_layout=True)
+fig, axes = plt.subplots(2, 2, figsize=(6.3, 4.7), constrained_layout=True)
 checks = []
 for row, temperature in enumerate(('18.5', '6.3')):
     path = ROOT / 'data' / ('hp_pulse_' + temperature + '_El10.613.json')
@@ -78,7 +78,6 @@ for row, temperature in enumerate(('18.5', '6.3')):
     b.set_ylabel('gate fraction')
     b.set_ylim(-.025, 1.025)
     b.set_title('(%s) %s °C: gating variables' % ('b' if row == 0 else 'd', temperature), loc='left')
-    b.legend(loc='upper right', ncol=3, handlelength=1.5, columnspacing=.8)
     for ax in (a, b):
         ax.set_xlabel(r'profile coordinate $\xi-\xi_{\rm peak}$ (ms)')
         ax.set_xlim(phase[0], phase[-1])
@@ -95,6 +94,8 @@ for row, temperature in enumerate(('18.5', '6.3')):
                    'wrongLeakControlRejected': True, 'sampledMaximumMvNumerical': float(refined[peak, 0]),
                    'minimumMvNumerical': float(np.min(refined[:, 0])),
                    'recordedCoordinateExtentMs': [float(t[0]), float(t[-1])]})
+fig.legend(*axes[0, 1].get_legend_handles_labels(), loc='outside upper center',
+           ncol=3, handlelength=1.5, columnspacing=1.5)
 fig.savefig(FIG / 'pulse-profiles.pdf', metadata={'CreationDate': None,
             'Title': 'Numerical Hodgkin-Huxley pulse profiles at the printed leak potential',
             'Author': 'Chase Hendrick'})
