@@ -3,7 +3,13 @@
 Each release of this repository is archived on Zenodo with its own DOI. The manuscript is a preprint and has not been
 peer reviewed.
 
+## 1.0.5 (2026-10-02)
+
+Editorial update. The manuscript now ends with Funding and a labelled statement on the use of AI (**Use of AI.**) at the body's own size; it had neither. The interval notation of Appendix A (for example `[x_k](Q)`), which the Markdown-to-PDF build had read as links, now prints as written. Hastings (1976), Foote and Chen (1981) and Carpenter (1976) are cited for what is known of them, with their reading basis in Appendix C, without apology. The hypothesis labels in the table of runs match the text, (H2). Names and titles carry their diacritics (Ważewski, Zgliczyński, and the title of Lohner's dissertation), spelling follows American usage, and Hodgkin and Huxley (1952) gains its DOI. The data availability paragraph cites the companion's Zenodo concept DOI. Numerical inputs, proof programs, certificates and results are unchanged. No new proof or scientific validation is claimed; previous archives remain unchanged.
+
 ## 1.0.4 (2026-09-29)
+
+**DOI:** [10.5281/zenodo.23050604](https://doi.org/10.5281/zenodo.23050604) (2026-09-30).
 
 Figure layout update. Replaces the gating-variable keys inside the right-hand pulse panels with one shared key above all four panels, with reserved figure margins. The m, n and h styles, temperature labels, independent coordinate scales and resting-voltage guide are preserved. The vector figure and manuscript PDF were rebuilt and inspected at manuscript scale. Shooting-node input hashes and the display-check results are unchanged. Scientific captions, numerical results, proof programs and certificates are unchanged. No new proof or scientific validation is claimed; previous archives remain unchanged.
 
