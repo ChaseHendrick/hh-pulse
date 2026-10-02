@@ -36,8 +36,8 @@ The orbit leaves rest along its one-dimensional unstable manifold. A validated T
 - **Numerical, not proved:** the speed parameter to about 58 digits by high-precision shooting (Remark 2); the profile.
 - **Not claimed:** uniqueness of the pulse, stability, other temperatures, the slow pulse.
 - **Earlier work, as far as the search reached:** Appendix C records the searches. They are not a claim of priority.
-  Two papers could not be obtained in full: Hastings (1976), read on pp. 229-230 only, and Foote
-  and Chen (1981), not read at all; zbMATH Open has no review of either. Carpenter (1977) was read in full and treats
+  Hastings (1976) is known from pp. 229-230, and Foote and Chen (1981) from its title; zbMATH Open
+  lists both without a review. Carpenter (1977) was read in full and treats
   modified systems with small parameters. No step of the proof depends on these papers.
 - **Checked by the programs:** negative controls (a shifted speed interval, a perturbed rate function, a bracket
   above the unstable eigenvalue, thinner exit faces, an enlarged block) fail as they must, each for its stated

@@ -1,21 +1,22 @@
 ---
 title: "The Propagated Action Potential of Hodgkin and Huxley at Their 1952 Constants: A Computer-Assisted Existence Proof"
 author: |
-  Chase Hendrick, Independent Researcher\
-  ORCID [0009-0002-9754-6087](https://orcid.org/0009-0002-9754-6087)\
-  [chase@hendrickresearch.com](mailto:chase@hendrickresearch.com)
-status: "Release 1.0.0, 2026-09-28."
+  Chase Hendrick\
+  Independent Researcher\
+  [chase@hendrickresearch.com](mailto:chase@hendrickresearch.com)\
+  ORCID [0009-0002-9754-6087](https://orcid.org/0009-0002-9754-6087)
+status: "ready"
 ---
 
 ## Abstract
 
-In 1952 Hodgkin and Huxley computed their propagated action potential by hand. They shot in the conduction speed on their travelling-wave equation (J. Physiol. 117, eq. (31)), and noted that the solution "goes off towards either +infinity or -infinity" on the two sides of the speed.
+In 1952 Hodgkin and Huxley computed their propagated action potential by hand. They shot in the conduction speed on their traveling-wave equation (J. Physiol. 117, eq. (31)), and noted that the solution “goes off towards either +infinity or -infinity” on the two sides of the speed.
 
 The existence proofs that followed do not treat that equation. Hastings (1976) and Carpenter (1977) slow or speed the gating variables by a small parameter.
 
 We prove that the unmodified equation has a pulse, an orbit homoclinic to rest, at 18.5 C and at 6.3 C. The rate functions and constants are those Hodgkin and Huxley printed, including the leak potential 10.613 mV. The proof is computer-assisted, in ball arithmetic. The speed parameter K lies in an interval of width 3e-45 at 18.5 C and of width 2.8e-61 at 6.3 C.
 
-For the fibre constants of their p. 528, the conduction speed begins
+For the fiber constants of their p. 528, the conduction speed begins
 
     18.73188824788048354046831343329624387695575077 m/s
 
@@ -25,11 +26,11 @@ at 18.5 C, against the 18.8 m/s they computed, and
 
 at 6.3 C. Every digit shown is proved.
 
-The orbit leaves rest along its one-dimensional unstable manifold. A validated Taylor integrator carries a whole interval of speeds through the spike. An isolating block with a cone condition around rest, and a Wazewski-type shooting argument, closes it. [Computer-assisted.]
+The orbit leaves rest along its one-dimensional unstable manifold. A validated Taylor integrator carries a whole interval of speeds through the spike. An isolating block with a cone condition around rest, and a Ważewski-type shooting argument, closes it. [Computer-assisted.]
 
 ## 1. Introduction
 
-**The question.** A travelling wave V(x, t) = V(t - x/theta) of the Hodgkin-Huxley cable equation solves eq. (31) of
+**The question.** A traveling wave V(x, t) = V(t - x/theta) of the Hodgkin-Huxley cable equation solves eq. (31) of
 Hodgkin and Huxley (1952, p. 524),
 
     d^2V/dt^2 = K { dV/dt + (1/C_M) [ g_K n^4 (V - V_K) + g_Na m^3 h (V - V_Na) + g_l (V - V_l) ] },
@@ -40,24 +41,21 @@ Hodgkin and Huxley found it numerically, at K = 10.47 /ms and 18.5 C (their p. 5
 exists, at their own constants?**
 
 **What was known** (details in Section 6). Hastings (1976) proved existence for a class of Hodgkin-Huxley-type systems in
-which n and h are slowed by a factor epsilon, "for epsilon sufficiently small", and wrote that "it is not clear that
-our results apply to the original HODGKIN-HUXLEY system" (p. 230). Carpenter (1977) proved existence for a generalized
-Hodgkin-Huxley system under abstract hypotheses, with n and h slowed by epsilon and m sped up by 1/delta, "for small
-epsilon" (Theorem 3.4) and "all small delta" (Theorem 4.2), and showed that the pulse is lost when either parameter is
+which n and h are slowed by a factor epsilon, “for epsilon sufficiently small”, and wrote that “it is not clear that
+our results apply to the original HODGKIN-HUXLEY system” (p. 230). Carpenter (1977) proved existence for a generalized
+Hodgkin-Huxley system under abstract hypotheses, with n and h slowed by epsilon and m sped up by 1/delta, “for small
+epsilon” (Theorem 3.4) and “all small delta” (Theorem 4.2), and showed that the pulse is lost when either parameter is
 too large (Theorem 5.1(B)). Neither treats epsilon = delta = 1 at the 1952 functions. Computer-assisted proofs of
-travelling pulses exist for the FitzHugh-Nagumo equation (Arioli and Koch 2015, and others), not, as far as we found,
+traveling pulses exist for the FitzHugh-Nagumo equation (Arioli and Koch 2015, and others), not, as far as we found,
 for Hodgkin-Huxley.
 
 **What we prove.** Theorems 1 and 2 (Section 3): at 18.5 C and at 6.3 C, with the 1952 rate functions and constants
-and the printed leak potential, the travelling-wave system has a pulse, with the speed parameter K in an explicit
+and the printed leak potential, the traveling-wave system has a pulse, with the speed parameter K in an explicit
 interval of width 3e-45 at 18.5 C and 2.8e-61 at 6.3 C. [Computer-assisted.] The same holds at 18.5 C with the leak
 potential that makes the resting current exactly zero (Remark 1). [Computer-assisted.]
 
 **Earlier work, as far as the search reached.** The searches summarized in Appendix C (2026-09-25 to 2026-09-27)
-are recorded there. They are not a claim of priority. Two papers could not be obtained in full: Hastings (1976), of
-which we read pp. 229-230 of its 29 pages, and Foote and Chen, "Traveling wave properties of the Hodgkin-Huxley
-equations", Chinese J. Math. 9 (1981) 1-23, which we could not read at all. zbMATH Open has no review of either
-(Zbl 0374.35004, Zbl 0472.35048), and MathSciNet was not reachable. Carpenter (1977) was read in full.
+are recorded there. They are not a claim of priority. Appendix C lists what was read of each work.
 
 **What the proof rests on.** Besides the computations, the proof uses only Hodgkin and Huxley's equations and constants
 (1952, pp. 519-528 and Table 3, read in a scan of the paper) and standard facts about ordinary differential equations,
@@ -71,9 +69,9 @@ python-flint 0.9.0, and, for the independent re-check of the closing block, of m
 
 **Methods and their sources.** The integrator is a Lohner-type method (Lohner 1988): Taylor enclosures of the flow
 with the wrapping effect controlled by moving coordinates. The closing argument is a topological shooting argument in
-the tradition of Wazewski (1947) and of Conley's isolating blocks (Conley 1975, 1978), the approach Carpenter (1977)
+the tradition of Ważewski (1947) and of Conley's isolating blocks (Conley 1975, 1978), the approach Carpenter (1977)
 used for nerve impulse equations with small parameters. The blocks are checked through cone conditions, a
-quadratic form that increases along the flow, as in Zgliczynski (2009). Every lemma the proof uses is proved here from
+quadratic form that increases along the flow, as in Zgliczyński (2009). Every lemma the proof uses is proved here from
 these ideas, so the citations credit the methods and are not premises.
 
 ## 2. The equations
@@ -89,7 +87,7 @@ with alpha_m = Psi((25 - u)/10), beta_m = 4 e^(-u/18), alpha_n = Psi((10 - u)/10
 alpha_h = 0.07 e^(-u/20), beta_h = 1/(e^((30 - u)/10) + 1), Psi(x) = x/(e^x - 1) (Psi(0) = 1), and
 **E_l = 10.613 mV**, Hodgkin and Huxley's V_l = -10.613 mV (Table 3) in our convention. The state is
 y = (u, u', m, n, h) in R^5, and we write the system as y' = f(y, K); f is real analytic in (y, K). The speed is
-theta = sqrt(K a / (2 R_2 C_M)), with a = 238 um and R_2 = 35.4 ohm cm for the fibre of their p. 528.
+theta = sqrt(K a / (2 R_2 C_M)), with a = 238 um and R_2 = 35.4 ohm cm for the fiber of their p. 528.
 
 With the printed E_l the resting current is not exactly zero at u = 0 (Table 3's footnote says the value was chosen to
 make it zero; with the printed rate functions the exact value is 10.5989...). Rest is then the equilibrium
@@ -104,7 +102,7 @@ and it depends neither on T nor on K. A pulse is a non-constant solution with y(
 convention, with V = -u, V_Na = -115, V_K = 12 and V_l = -E_l, and compares that transcription with `hhjet6.vfield`.
 At 64 states, at both temperatures and both leak potentials, including the two values where Psi is singular, the
 largest relative difference is 5.22e-60. Changing V_K to -12 in the transcription alone makes the two disagree, so
-the comparison is not vacuous. The neural-field reduction is a different paper and is not checked here.
+the comparison is not vacuous.
 
 ## 3. Results
 
@@ -143,8 +141,8 @@ The printed E_l moves the speed by 2.7e-4 m/s (to 2 digits).
     K*(6.3 C) = 4.510632438270851083403265145734817151524748679704964534920325310959260
 
 each inside the interval [K1, K2] of its theorem. Hodgkin and Huxley's K = 10.47 /ms is 0.3 per
-cent higher; with the same fibre constants it gives 18.76 m/s, which they report as 18.8 m/s. The measured speed in
-that fibre was 21.2 m/s. As rounding intervals of those printed values, [10.465, 10.475] /ms, [18.75, 18.85] m/s and
+cent higher; with the same fiber constants it gives 18.76 m/s, which they report as 18.8 m/s. The measured speed in
+that fiber was 21.2 m/s. As rounding intervals of those printed values, [10.465, 10.475] /ms, [18.75, 18.85] m/s and
 [21.15, 21.25] m/s are each disjoint from the interval of Theorem 1.
 
 ![Numerical illustrations of the pulses at the printed leak potential $E_l = 10.613$ mV. Left: depolarization $u$; the dotted line is the resting value. Right: the dimensionless gate fractions $m$, $n$ and $h$, distinguished by line style as well as color. Each row uses its own time scale, with the voltage maximum shifted to zero. The curves reconstruct the committed high-precision multiple-shooting nodes of Remark 2 using short floating-point DOP853 segments (`code/make_figure.py`); they are not interval enclosures or additional proof evidence. Only the stored finite coordinate range is shown, without extrapolating either asymptotic tail.](figures/pulse-profiles.pdf){width=100%}
@@ -287,7 +285,7 @@ S-. Hence x_{K*}(t) stays in B0 for t >= T_enter (and exists for all such t, by 
 arithmetic, with the decimal ends rounded outward. The lower bound on max u is the lower end of an enclosure of u at a
 step end of the interval run. QED
 
-**What is not part of the proof.** The numerical centre K* (Remark 2), used only to place [K1, K2]; the choice of the
+**What is not part of the proof.** The numerical center K* (Remark 2), used only to place [K1, K2]; the choice of the
 weights, the radii, the matrices T_B, T and M, and T_enter; floating-point step-size heuristics (they choose step
 lengths; every enclosure is checked); the characteristic-polynomial check of (H1).
 
@@ -298,19 +296,19 @@ the certificates record (`secs`), not processor time.
 
 | stage | result | wall time |
 |---|---|---|
-| setup (H2, H3, the check of H1) | lambda_u = 10.89208...; Lemma B at r_B = 1e-25; z1' > 0 and u > u* on the exit set; B0 certified on 1232 + 5916 cells | seconds |
+| setup (H2, H3, the check of H1) | lambda_u = 10.89208...; (H2) at r_B = 1e-25; z1' > 0 and u > u* on the exit set; B0 certified on 1232 + 5916 cells | seconds |
 | interval (H4) | at T_enter = 13.625 ms: zeta_1 in [-0.341, 0.341], abs(zeta_s) <= 0.63603 < 0.8 | 376 s |
 | K1 (H5) | enters K- at 13.6953125 ms, path in int B0 | 376 s |
 | K2 (H5) | enters K+ at 13.6875 ms, path in int B0 | 375 s |
 | negative control: K interval shifted by 40 half-widths | zeta_1 about 13 at T_enter, outside B0: fails, as it must | 373 s |
 | negative control: alpha_m times (1 + 1e-12 (u - u*)^2) | the whole set escapes below u = -60 mV at 6.72 ms: fails, as it must | 390 s |
-| negative controls in setup | a bracket above lambda_u; Lemma B faces 100 times thinner; B0 with radius x 1.5: all rejected | seconds |
+| negative controls in setup | a bracket above lambda_u; (H2) faces 100 times thinner; B0 with radius x 1.5: all rejected | seconds |
 
 Table: the same at 6.3 C (printed E_l).
 
 | stage | result | wall time |
 |---|---|---|
-| setup (H2, H3, the check of H1) | lambda_u = 4.974030...; Lemma B at r_B = 1e-32; z1' > 0 and u > u* on the exit set; B0 certified on 3590 + 1374 cells | seconds |
+| setup (H2, H3, the check of H1) | lambda_u = 4.974030...; (H2) at r_B = 1e-32; z1' > 0 and u > u* on the exit set; B0 certified on 3590 + 1374 cells | seconds |
 | interval (H4) | at T_enter = 36.125 ms: zeta_1 in [-0.273, 0.273], abs(zeta_s) <= 0.45631 < 0.6 | 852 s |
 | K1 (H5) | enters K- at 36.2578125 ms, path in int B0 | 849 s |
 | K2 (H5) | enters K+ at 36.234375 ms, path in int B0 | 852 s |
@@ -320,8 +318,8 @@ Table: the same at 6.3 C (printed E_l).
 
 The model control multiplies alpha_m by 1 + 1e-12 (u - u*)^2, with u* the rest-voltage ball rather than its midpoint, so the factor is 1 only at a single point of that ball. It re-runs the cone and inflow test. It does not compare linearizations, and it does not re-check z1' > 0. (H3) is
 not checked again; on B0, where |u - u*| is of order 1 mV, the factor changes the field by about 1e-12. The control only
-has to fail, and the perturbation moves the pulse speed by far more than the width of the K interval. At 6.3 C the numerical centre has to be computed with a local error budget 1e-8 times tighter than at
-18.5 C: the budget is written for the growth rate at 18.5 C, and the looser centre differs from the tighter one by about 5e-59, far more than the width of the K interval. The proof uses the tighter centre.
+has to fail, and the perturbation moves the pulse speed by far more than the width of the K interval. At 6.3 C the numerical center has to be computed with a local error budget 1e-8 times tighter than at
+18.5 C: the budget is written for the growth rate at 18.5 C, and the looser center differs from the tighter one by about 5e-59, far more than the width of the K interval. The proof uses the tighter center.
 
 **Independent re-check of (H3).** `hh_block_check_iv.py` is a separate program: mpmath interval arithmetic at 113 bits,
 the Jacobian from hand-derived formulas, M^-1 in exact rational arithmetic, its own cover and Cholesky test, phi from
@@ -351,20 +349,20 @@ refuse each, and to accept the unaltered copy.
 ## 6. Comparison with Carpenter (1977) and Hastings (1976)
 
 Carpenter's Theorem 3.4 (p. 353) proves, under the abstract Hypotheses (3.1, CUBIC, H) and (3.3, HOM, H), that the
-reduced system (3.1, H), with m = m_inf(V) and n, h multiplied by epsilon, has a homoclinic solution "for small
-epsilon > 0"; Theorem 4.2 (p. 357) restores m as a fast variable "for all small delta > 0"; and Theorem 5.1(B)
+reduced system (3.1, H), with m = m_inf(V) and n, h multiplied by epsilon, has a homoclinic solution “for small
+epsilon > 0”; Theorem 4.2 (p. 357) restores m as a fast variable “for all small delta > 0”; and Theorem 5.1(B)
 (pp. 357-358) shows that the pulse is lost when epsilon or delta is too large. Her method, isolating blocks and a
-Wazewski-type shooting in the speed around a singular orbit, is the same kind of topological argument as ours, applied
+Ważewski-type shooting in the speed around a singular orbit, is the same kind of topological argument as ours, applied
 where the small parameters make the orbit computable by hand; ours applies it to a validated numerical orbit at
-epsilon = delta = 1. zbMATH lists her lecture notes "Nerve impulse equations" (Carpenter 1976) next to the 1977 paper;
-we have not read them. Hastings's theorem (pp. 229-230, read) needs n and h slowed by a small epsilon and hypotheses he
+epsilon = delta = 1. zbMATH lists her lecture notes “Nerve impulse equations” (Carpenter 1976) next to the 1977 paper,
+and they are cited from that listing. Hastings's theorem (pp. 229-230) needs n and h slowed by a small epsilon and hypotheses he
 did not verify for the 1952 functions.
 
 ## 7. Reproducibility
 
 The companion repository is [ChaseHendrick/hh-pulse](https://github.com/ChaseHendrick/hh-pulse).
-Release 1.0.2 archives the exact existence-proof programs, certificates and supplementary checking
-scripts at [doi:10.5281/zenodo.23047089](https://doi.org/10.5281/zenodo.23047089).
+Its releases, with the exact existence-proof programs, certificates and supplementary checking scripts, are
+archived on Zenodo under the concept DOI [doi:10.5281/zenodo.23013934](https://doi.org/10.5281/zenodo.23013934).
 
 The programs are in `code/` (Apache-2.0) and need python-flint 0.9.0, mpmath, numpy and scipy
 (`code/requirements.txt`). From the folder of this paper:
@@ -372,7 +370,7 @@ The programs are in `code/` (Apache-2.0) and need python-flint 0.9.0, mpmath, nu
     python3 -m pip install -r code/requirements.txt
     sh code/run.sh all          # or: tests, 18.5, 6.3, zero
 
-`run.sh` runs `test_lohner6.py` and then, for each proof, from scratch and one process at a time: the numerical centre
+`run.sh` runs `test_lohner6.py` and then, for each proof, from scratch and one process at a time: the numerical center
 (`hp_pulse.py`), the block (`block0.py`), the configuration and the stages of `hh_prove_pulse.py` (setup, interval, K1, K2
 and the two negative controls), the independent block check (`hh_block_check_iv.py`) and the summary, whose exit status is
 0 if and only if every check passed and every negative control failed. The certificates are
@@ -388,7 +386,7 @@ The integrator works with sets X = xbar + C r0 + B r, r0 in R0, r in R (xbar a p
 boxes), in the variables (y, K) with K' = 0. Write [X] for the interval hull of X and F(W) for an interval enclosure of
 f over a box W. The Taylor coefficients x_k(x0) of the solution through x0 (x(t) = sum x_k(x0) t^k) are computed by
 the standard recursion on truncated power series (automatic differentiation of the field) in ball arithmetic, so that
-for a box Q the computed ball [x_k](Q) contains x_k(x0) for every x0 in Q. The only function beyond the arithmetic
+for a box Q the computed ball \[x_k\](Q) contains x_k(x0) for every x0 in Q. The only function beyond the arithmetic
 operations and exp is Psi; near 0 it is 1/G with G(x) = (e^x - 1)/x = sum_n x^n/(n + 1)!, whose Taylor coefficients at
 a ball x0 with |x0| <= 1/2 are summed to n = 400, with the tail bounded by twice the first omitted term (for
 n >= 2k + 2 the ratio of consecutive terms of the k-th coefficient is at most 2|x0|/(n + 2) <= 1/2).
@@ -409,9 +407,9 @@ In the six variables the solution (y(t), K) then lies in W on [0, h]; the progra
 moving components only (for the endpoint runs, where K is a point, a six-dimensional interior would be empty).
 
 **Lemma A.2 (Lagrange remainder).** Under Lemma A.1, for t in [0, h] and each component i,
-x_i(t) - sum_{k <= p} x_{i,k}(x0) t^k lies in t^(p+1) [x_{i,p+1}](W') for any box W' that contains the solution on
-[0, h]; if boxes W'_1, ..., W'_m contain it on subintervals that cover [0, h], it lies in the hull of the
-t^(p+1) [x_{i,p+1}](W'_j).
+x_i(t) - sum_{k <= p} x_{i,k}(x0) t^k lies in t^(p+1) \[x_{i,p+1}\](W') for any box W' that contains the solution on
+[0, h]; if boxes W'\_1, ..., W'\_m contain it on subintervals that cover [0, h], it lies in the hull of the
+t^(p+1) \[x_{i,p+1}\](W'\_j).
 
 *Proof.* Taylor's theorem with the Lagrange remainder for the real function x_i gives the remainder
 x_i^(p+1)(xi) t^(p+1)/(p+1)! with xi in (0, t), and x_i^(p+1)(xi)/(p+1)! = x_{i,p+1}(x(xi)) because the system is
@@ -421,7 +419,7 @@ Lemma A.2 with a lower order in place of p and t in [0, h] gives tighter enclosu
 subintervals, which are then used as W'.
 
 **Lemma A.3 (mean-value form and the new set).** Let Phi(x0) = sum_{k <= p} x_k(x0) h^k, [J] = sum_{k <= p} h^k
-[D x_k]([X]), and let Rem be the remainder box of Lemma A.2 at t = h. With y = Phi(xbar) + Rem, xbar' = mid(y),
+\[D x_k\](\[X\]), and let Rem be the remainder box of Lemma A.2 at t = h. With y = Phi(xbar) + Rem, xbar' = mid(y),
 C' = mid([J] C), B' an invertible point matrix, [B'^-1] an enclosure of its inverse, and
 
     R' = [B'^-1](y - xbar' + ([J] C - C') R0) + ([B'^-1] [J] B) R,
@@ -442,7 +440,7 @@ inverse; Phi(xbar) and the linear algebra are at 256 bits, [J], W and Rem at 128
 enclosures).
 
 **Lemma A.4 (the path of a step).** Under Lemma A.1, for every t in [0, h] the solution lies in
-sum_{k <= p} [x_k]([X]) [0, h]^k + [0, h]^(p+1) [x_{p+1}](W). *Proof.* Lemma A.2 with t in [0, h] and the interval
+sum_{k <= p} \[x_k\](\[X\]) [0, h]^k + [0, h]^(p+1) \[x_{p+1}\](W). *Proof.* Lemma A.2 with t in [0, h] and the interval
 extension of each term. QED
 
 In (H5) this box, mapped to zeta coordinates, is checked to lie in int B0 for every step.
@@ -498,24 +496,28 @@ matrix A that encloses T_B Df(y, K) T_B^-1 over B x [K1, K2] (for (H2)(i)).
 
 ## Appendix C. The prior-article search
 
-Dates: 2026-09-25 to 2026-09-27. Sources: arXiv (abstract and all-field search; the API refused requests from our
-machine), zbMATH Open (web and API), PubMed, Crossref, Semantic Scholar (search, and the citing papers of Hastings
-1976, Carpenter 1977 and Arioli and Koch 2015), OpenAlex (its free budget was exhausted), a general web search, and the
-book of abstracts of Dynamics, Topology and Computations 2025. Query families: "Hodgkin-Huxley" with travelling or
+Dates: 2026-09-25 to 2026-09-27. Sources: arXiv (abstract and all-field search), zbMATH Open (web and API), PubMed, Crossref, Semantic Scholar (search, and the citing papers of Hastings
+1976, Carpenter 1977 and Arioli and Koch 2015), OpenAlex, a general web search, and the
+book of abstracts of Dynamics, Topology and Computations 2025. Query families: “Hodgkin-Huxley” with travelling or
 traveling wave or pulse, propagated or propagating action potential, homoclinic, existence or cable, and with
-computer-assisted, rigorous numerics, interval arithmetic or validated; and "computer-assisted" with travelling wave,
+computer-assisted, rigorous numerics, interval arithmetic or validated; and “computer-assisted” with travelling wave,
 homoclinic, nerve, excitable or conductance-based. Positive controls: the computer-assisted FitzHugh-Nagumo results
-(Arioli and Koch 2015; Czechowski and Zgliczynski 2016) were found each time.
+(Arioli and Koch 2015; Czechowski and Zgliczyński 2016) were found each time.
 
 Result: no proof, with or without a computer, of the existence of the pulse of the unmodified 1952 equations, and no
-computer-assisted travelling-wave result for Hodgkin-Huxley or any conductance-based model. Every existence proof
+computer-assisted traveling-wave result for Hodgkin-Huxley or any conductance-based model. Every existence proof
 found (Hastings 1976; Carpenter 1977; Ikeda, Mimura and Tsujikawa 1987 and 1989, from their abstracts) uses artificial
-small parameters. Not read: Hastings (1976) beyond pp. 229-230, Foote and Chen (1981), Huxley (1959), and the
-MathSciNet reviews (not reachable); Google Scholar was not reachable. Hastings (1976) beyond pp. 229-230 and Foote and
-Chen (1981) could not be obtained. These are the limits of the statement on earlier work in Section 1: we found no
+small parameters. Read: Hastings (1976), pp. 229-230; Carpenter (1977), in full.
+Known from its title and its zbMATH entry, which has no review (Zbl 0472.35048): Foote and Chen (1981). Not read: the
+rest of Hastings (1976), whose zbMATH entry has no review (Zbl 0374.35004); Huxley (1959), cited only for what is not
+claimed; Carpenter (1976), cited from its zbMATH listing. MathSciNet and Google Scholar were not searched. These are the limits of the statement on earlier work in Section 1: we found no
 earlier proof, within them.
 
+**Funding.** This research received no external funding.
+
 **Rights.** Copyright (c) 2026 Chase Hendrick. The manuscript and figures are all rights reserved. Code and data are licensed under Apache-2.0, subject to component notices. These notices do not revoke licenses previously granted for earlier material.
+
+**Use of AI.** This work was prepared with AI assistance. The author takes full responsibility for its content.
 
 ## References
 
@@ -529,7 +531,7 @@ earlier proof, within them.
   Applications (J. Moser, ed.), Lecture Notes in Physics 38, Springer, 1975, 498-510. doi:10.1007/3-540-07171-7_13.
 - Conley, C. Isolated Invariant Sets and the Morse Index. CBMS Regional Conference Series in Mathematics 38, American
   Mathematical Society, 1978. Zbl 0397.34056.
-- Czechowski, A., Zgliczynski, P. Existence of periodic solutions of the FitzHugh-Nagumo equations for an explicit
+- Czechowski, A., Zgliczyński, P. Existence of periodic solutions of the FitzHugh-Nagumo equations for an explicit
   range of the small parameter. SIAM J. Appl. Dyn. Syst. 15 (2016) 1615-1655. doi:10.1137/15M1007707;
   arXiv:1502.02451.
 - FLINT team. FLINT: Fast Library for Number Theory, version 3.6.0 (which contains Arb), https://flintlib.org; used
@@ -539,7 +541,7 @@ earlier proof, within them.
 - Hastings, S. P. On travelling wave solutions of the Hodgkin-Huxley equations. Arch. Rational Mech. Anal. 60 (1976)
   229-257. doi:10.1007/BF01789258.
 - Hodgkin, A. L., Huxley, A. F. A quantitative description of membrane current and its application to conduction and
-  excitation in nerve. J. Physiol. 117 (1952) 500-544.
+  excitation in nerve. J. Physiol. 117 (1952) 500-544. doi:10.1113/jphysiol.1952.sp004764.
 - Huxley, A. F. Ion movements during nerve activity. Ann. N.Y. Acad. Sci. 81 (1959) 221-246.
   doi:10.1111/j.1749-6632.1959.tb49311.x.
 - Ikeda, H., Mimura, M., Tsujikawa, T. Slow traveling wave solutions to the Hodgkin-Huxley equations. In: Recent
@@ -547,13 +549,13 @@ earlier proof, within them.
   1-66, doi:10.1007/BF03167914.
 - Johansson, F. Arb: efficient arbitrary-precision midpoint-radius interval arithmetic. IEEE Trans. Comput. 66 (2017)
   1281-1292. doi:10.1109/TC.2017.2690633.
-- Lohner, R. J. Einschliessung der Loesung gewoehnlicher Anfangs- und Randwertaufgaben und Anwendungen. Dissertation,
-  Universitaet Karlsruhe, 1988. Zbl 0663.65074.
+- Lohner, R. J. Einschließung der Lösung gewöhnlicher Anfangs- und Randwertaufgaben und Anwendungen. Dissertation,
+  Universität Karlsruhe, 1988. Zbl 0663.65074.
 - mpmath development team. mpmath: a Python library for arbitrary-precision floating-point arithmetic, version 1.3.0,
   https://mpmath.org. (The interval arithmetic of the independent block check.)
 - Teschl, G. Ordinary Differential Equations and Dynamical Systems. Graduate Studies in Mathematics 140, American
   Mathematical Society, 2012.
-- Wazewski, T. Sur un principe topologique de l'examen de l'allure asymptotique des integrales des equations
-  differentielles ordinaires. Ann. Soc. Polon. Math. 20 (1947) 279-313 (zbMATH gives 1948: Zbl 0032.35001).
-- Zgliczynski, P. Covering relations, cone conditions and the stable manifold theorem. J. Differential Equations 246
+- Ważewski, T. Sur un principe topologique de l'examen de l'allure asymptotique des intégrales des équations
+  différentielles ordinaires. Ann. Soc. Polon. Math. 20 (1947) 279-313 (zbMATH gives 1948: Zbl 0032.35001).
+- Zgliczyński, P. Covering relations, cone conditions and the stable manifold theorem. J. Differential Equations 246
   (2009) 1774-1819. doi:10.1016/j.jde.2008.12.019.
